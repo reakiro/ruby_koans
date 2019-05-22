@@ -8,7 +8,7 @@ class DiceSet
 
   def roll(val)
     @values = []
-    (1..val).each { |i| @values << 1 + rand(6) }
+    (1..val).reduce(@values) {|values| values << 1 * rand(6)}
   end
 end
 
